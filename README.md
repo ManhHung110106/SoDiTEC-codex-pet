@@ -39,6 +39,10 @@ Repository này lưu trữ phiên bản SodiWorm dành cho tính năng desktop p
 
 ## Xem trước và cài đặt
 
+Gói cài đặt sẵn dành cho phiên bản 01 là **SodiWorm-v01.zip**, được cung cấp trong mục Assets tại [GitHub Releases](https://github.com/ManhHung110106/SoDiTEC-codex-pet/releases). Khi bản phát hành được đăng, tải ZIP này, giải nén và đặt thư mục `SodiWorm` vào `%USERPROFILE%\.codex\pets`. Đường dẫn cuối cùng phải là `%USERPROFILE%\.codex\pets\SodiWorm\pet.json`; sau đó làm mới **Settings → Pets** và chọn **SodiWorm**.
+
+Gói ZIP được giải nén thành thư mục `SodiWorm`; không cần tải hoặc cài thêm mã nguồn trong repository.
+
 **Việc sử dụng hình ảnh, bao gồm sử dụng desktop pet, cần có sự cho phép trước của SoDiTEC theo [LICENSE](LICENSE).** Repository công khai không đồng nghĩa với việc cấp quyền sử dụng hình ảnh.
 
 Sau khi được CLB cho phép:
@@ -57,3 +61,7 @@ Gói sử dụng sprite phiên bản 2: atlas **1536 × 2288 px**, ô **192 × 2
 Các bên không được sử dụng hình ảnh của CLB vào bất kỳ mục đích nào khi chưa xin ý kiến và nhận được sự cho phép của CLB. Vui lòng liên hệ trực tiếp SoDiTEC để xin phép; phạm vi sử dụng thực hiện theo nội dung được CLB chấp thuận.
 
 Chi tiết tại [LICENSE](LICENSE).
+
+## Đóng gói bản phát hành
+
+Chạy `python scripts/build_release.py` từ repository để tạo `release/SodiWorm-v01.zip` và `release/SHA256SUMS.txt`. ZIP chứa trực tiếp thư mục `SodiWorm` với cấu hình, spritesheet, mappings, trang xem trước, README và LICENSE. File ZIP được giữ ở máy và bỏ qua bởi Git; tải nó lên mục Assets khi tạo GitHub Release.
