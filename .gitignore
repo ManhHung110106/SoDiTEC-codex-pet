@@ -12,6 +12,8 @@ __pycache__/
 # Build archives; attach these to GitHub Releases if needed
 *.zip
 /release/
+/scripts/
+/testing/
 
 # Local secrets
 .env

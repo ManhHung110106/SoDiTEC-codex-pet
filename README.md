@@ -64,4 +64,4 @@ Chi tiết tại [LICENSE](LICENSE).
 
 ## Đóng gói bản phát hành
 
-Chạy `python scripts/build_release.py` từ repository để tạo `release/SodiWorm-v01.zip` và `release/SHA256SUMS.txt`. ZIP chứa trực tiếp thư mục `SodiWorm` với cấu hình, spritesheet, mappings, trang xem trước, README và LICENSE. File ZIP được giữ ở máy và bỏ qua bởi Git; tải nó lên mục Assets khi tạo GitHub Release.
+ZIP cài đặt chứa trực tiếp thư mục `SodiWorm` với cấu hình, spritesheet, mappings, trang xem trước, README và LICENSE. Thư mục `release/` và các script đóng gói được giữ ở máy, bỏ qua bởi Git. Gói ZIP được đính kèm vào mục Assets của GitHub Release.
