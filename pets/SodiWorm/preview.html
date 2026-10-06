@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SodiWorm animation preview</title>
+<style>body{font:16px system-ui;margin:36px;background:#f4f4f5;color:#172033}h1{font-size:24px}.sprite{width:192px;height:208px;background-image:url(spritesheet.png);background-size:1536px 2288px;margin:20px;border:1px solid #c5c9d0}.stage{display:inline-block;background:repeating-conic-gradient(#eee 0% 25%,#fff 0% 50%) 0/24px 24px}button,select{padding:8px;margin:6px}p{max-width:680px}</style>
+<h1>SodiWorm</h1><p>Preview rendered directly from the final spritesheet. Select an activity, or move your pointer over the stage to inspect directional attention.</p>
+<select id="state"><option>idle</option><option>running-right</option><option>running-left</option><option>waving</option><option>jumping</option><option>failed</option><option>waiting</option><option>running</option><option>review</option><option>cursor look</option></select><button id="play">Pause</button><button id="theme">Dark background</button><br><div class="stage" id="stage"><div class="sprite" id="sprite"></div></div><p id="info"></p>
+<script>
+const states=['idle','running-right','running-left','waving','jumping','failed','waiting','running','review'];
+const durations=[[1680,660,660,840,840,1920],[120,120,120,120,120,120,120,220],[120,120,120,120,120,120,120,220],[140,140,140,280],[140,140,140,140,280],[140,140,140,140,140,140,140,240],[150,150,150,150,150,260],[120,120,120,120,120,220],[150,150,150,150,150,280]];
+const sprite=document.getElementById('sprite'),select=document.getElementById('state'),info=document.getElementById('info');let frame=0,timer,playing=true;
+function show(row,col){sprite.style.backgroundPosition=`${-col*192}px ${-row*208}px`;info.textContent=`${select.value} · row ${row}, frame ${col+1}`}
+function tick(){clearTimeout(timer);if(select.value==='cursor look')return;let row=states.indexOf(select.value);show(row,frame);if(playing)timer=setTimeout(()=>{frame=(frame+1)%durations[row].length;tick()},durations[row][frame])}
+select.onchange=()=>{frame=0;tick()};document.getElementById('play').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pause':'Play';tick()};document.getElementById('theme').onclick=()=>{let s=document.getElementById('stage');s.style.background=s.style.background?'':'#202838'};
+document.getElementById('stage').onpointermove=e=>{if(select.value!=='cursor look')return;let b=sprite.getBoundingClientRect(),dx=e.clientX-b.left-b.width/2,dy=e.clientY-b.top-b.height/2;let i=(Math.round(((Math.atan2(dx,-dy)*180/Math.PI+360)%360)/22.5))%16;show(9+Math.floor(i/8),i%8);info.textContent+=` · ${i*22.5}°`};tick();
+</script></html>

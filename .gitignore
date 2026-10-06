@@ -1,0 +1,18 @@
+# Local and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+__pycache__/
+*.py[cod]
+*.tmp
+*.log
+
+# Build archives; attach these to GitHub Releases if needed
+*.zip
+
+# Local secrets
+.env
+.env.*
+!.env.example

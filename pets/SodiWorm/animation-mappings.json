@@ -1,0 +1,292 @@
+{
+  "note": "Documentation of fixed native app mapping; this file is not loaded as native configuration. Native idle playback uses a 6x duration multiplier; ordinary activities repeat three times then return to idle unless looping is requested.",
+  "spriteVersionNumber": 2,
+  "columns": 8,
+  "rows": 11,
+  "cellWidth": 192,
+  "cellHeight": 208,
+  "animations": {
+    "idle": {
+      "row": 0,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "frameDurationsMs": [
+        280,
+        110,
+        110,
+        140,
+        140,
+        320
+      ],
+      "behavior": "idle",
+      "nativePlaybackDurationsMs": [
+        1680,
+        660,
+        660,
+        840,
+        840,
+        1920
+      ]
+    },
+    "running-right": {
+      "row": 1,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "frameDurationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "behavior": "drag toward screen-right",
+      "visual": "Cheerful playful camera-carrying movement; no panic."
+    },
+    "running-left": {
+      "row": 2,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "frameDurationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "behavior": "drag toward screen-left",
+      "visual": "Cheerful playful camera-carrying movement; no panic."
+    },
+    "waving": {
+      "row": 3,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frameDurationsMs": [
+        140,
+        140,
+        140,
+        280
+      ],
+      "behavior": "greeting / positive interaction"
+    },
+    "jumping": {
+      "row": 4,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "frameDurationsMs": [
+        140,
+        140,
+        140,
+        140,
+        280
+      ],
+      "behavior": "hover / celebration"
+    },
+    "failed": {
+      "row": 5,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "frameDurationsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        240
+      ],
+      "behavior": "failure / error"
+    },
+    "waiting": {
+      "row": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "frameDurationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        260
+      ],
+      "behavior": "waiting / needs input",
+      "visual": "Temporary curly brown wig and framed certificate costume."
+    },
+    "running": {
+      "row": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "frameDurationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "behavior": "working / task execution",
+      "visual": "laptop retains the white globe-over-open-book emblem."
+    },
+    "review": {
+      "row": 8,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "frameDurationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        280
+      ],
+      "behavior": "review / reading",
+      "visual": "book retains the white globe-over-open-book emblem."
+    }
+  },
+  "lookDirections": [
+    {
+      "angleDegrees": 0.0,
+      "row": 9,
+      "column": 0
+    },
+    {
+      "angleDegrees": 22.5,
+      "row": 9,
+      "column": 1
+    },
+    {
+      "angleDegrees": 45.0,
+      "row": 9,
+      "column": 2
+    },
+    {
+      "angleDegrees": 67.5,
+      "row": 9,
+      "column": 3
+    },
+    {
+      "angleDegrees": 90.0,
+      "row": 9,
+      "column": 4
+    },
+    {
+      "angleDegrees": 112.5,
+      "row": 9,
+      "column": 5
+    },
+    {
+      "angleDegrees": 135.0,
+      "row": 9,
+      "column": 6
+    },
+    {
+      "angleDegrees": 157.5,
+      "row": 9,
+      "column": 7
+    },
+    {
+      "angleDegrees": 180.0,
+      "row": 10,
+      "column": 0
+    },
+    {
+      "angleDegrees": 202.5,
+      "row": 10,
+      "column": 1
+    },
+    {
+      "angleDegrees": 225.0,
+      "row": 10,
+      "column": 2
+    },
+    {
+      "angleDegrees": 247.5,
+      "row": 10,
+      "column": 3
+    },
+    {
+      "angleDegrees": 270.0,
+      "row": 10,
+      "column": 4
+    },
+    {
+      "angleDegrees": 292.5,
+      "row": 10,
+      "column": 5
+    },
+    {
+      "angleDegrees": 315.0,
+      "row": 10,
+      "column": 6
+    },
+    {
+      "angleDegrees": 337.5,
+      "row": 10,
+      "column": 7
+    }
+  ],
+  "lookCoordinateSystem": "Clockwise in screen coordinates: 0 up, 90 right, 180 down, 270 left; neutral deadzone uses idle."
+}
