@@ -26,6 +26,8 @@ Repository này lưu trữ phiên bản SodiWorm dành cho tính năng desktop p
 ├── README.md
 ├── LICENSE
 ├── .gitignore
+├── install.bat             # Cài đặt nhanh trên Windows
+├── install.ps1             # Tự chép pet vào Codex home
 ├── assets/                 # Hình ảnh và chuyển động xem trước
 └── pets/
     └── SodiWorm/
@@ -39,9 +41,19 @@ Repository này lưu trữ phiên bản SodiWorm dành cho tính năng desktop p
 
 ## Xem trước và cài đặt
 
-Gói cài đặt sẵn dành cho phiên bản 01 là **SodiWorm-v01.zip**, được cung cấp trong mục Assets tại [GitHub Releases](https://github.com/ManhHung110106/SoDiTEC-codex-pet/releases). Khi bản phát hành được đăng, tải ZIP này, giải nén và đặt thư mục `SodiWorm` vào `%USERPROFILE%\.codex\pets`. Đường dẫn cuối cùng phải là `%USERPROFILE%\.codex\pets\SodiWorm\pet.json`; sau đó làm mới **Settings → Pets** và chọn **SodiWorm**.
+Gói cài đặt sẵn dành cho phiên bản 01 là **SodiWorm-v01.zip**, được cung cấp trong mục Assets tại [GitHub Releases](https://github.com/ManhHung110106/SoDiTEC-codex-pet/releases).
 
-Gói ZIP được giải nén thành thư mục `SodiWorm`; không cần tải hoặc cài thêm mã nguồn trong repository.
+### Cài nhanh trên Windows
+
+Sau khi được CLB cho phép sử dụng:
+
+1. Tải `SodiWorm-v01.zip` và **giải nén toàn bộ**.
+2. Nhấp đúp **`install.bat`** ở cạnh thư mục `SodiWorm`.
+3. Mở **Codex → Settings → Pets**, làm mới danh sách và chọn **SodiWorm**. Khởi động lại Codex nếu chưa thấy pet.
+
+Không cần quyền quản trị hoặc cài thêm phần mềm. Bộ cài dùng `CODEX_HOME` nếu biến môi trường này đã được thiết lập, mặc định là `%USERPROFILE%\.codex`. Chạy lại để cập nhật SodiWorm; các pet khác được giữ nguyên. Giữ `install.bat` và `install.ps1` cạnh nhau.
+
+### Cài thủ công hoặc từ mã nguồn
 
 **Việc sử dụng hình ảnh, bao gồm sử dụng desktop pet, cần có sự cho phép trước của SoDiTEC theo [LICENSE](LICENSE).** Repository công khai không đồng nghĩa với việc cấp quyền sử dụng hình ảnh.
 
@@ -64,4 +76,4 @@ Chi tiết tại [LICENSE](LICENSE).
 
 ## Đóng gói bản phát hành
 
-ZIP cài đặt chứa trực tiếp thư mục `SodiWorm` với cấu hình, spritesheet, mappings, trang xem trước, README và LICENSE. Thư mục `release/` và các script đóng gói được giữ ở máy, bỏ qua bởi Git. Gói ZIP được đính kèm vào mục Assets của GitHub Release.
+ZIP cài đặt chứa `install.bat`, `install.ps1` và thư mục `SodiWorm` với cấu hình, spritesheet, mappings, trang xem trước, README và LICENSE. Thư mục `release/` và các script đóng gói được giữ ở máy, bỏ qua bởi Git. Gói ZIP được đính kèm vào mục Assets của GitHub Release.
